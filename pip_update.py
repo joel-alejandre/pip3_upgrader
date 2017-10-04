@@ -48,6 +48,7 @@ class UpdateUpgradePip(object):
             print("------------", end="\n\n")
 
 if __name__ == '__main__':
+    """Standard usage for updating pip3 modules"""
     pip_update = UpdateUpgradePip()
     pip_update.update()
     pip_update.upgrade()
