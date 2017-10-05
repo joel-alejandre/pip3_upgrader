@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """Pip3 Updater
 
 This module creates a class which calls the sysetem's pip3 and gets a list of
@@ -14,7 +14,6 @@ Example:
 from subprocess import check_output, call
 import re
 
-#pprint(pip.get_installed_distributions())
 
 class UpdateUpgradePip(object):
     """Allows one to call pip3 locally and update and upgrade pacakges"""
@@ -30,7 +29,6 @@ class UpdateUpgradePip(object):
 
         for package in pip_update_list.strip().split('\n'):
             package_to_update = self.compile_regex.search(package).group()
-            #print(package_to_update)
             self.update_list.append(package_to_update)
 
     def upgrade(self):
